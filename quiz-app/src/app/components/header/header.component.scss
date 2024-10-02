@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 5% 0;
+
+  &__box {
+    background-color: var(--orange-bg);
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    padding: 3% 0;
+    text-align: center;
+    border: 0.1vw solid var(--white);
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    &__box {
+      font-size: small;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.answers {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  &__container {
+    padding: 5%;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 5%;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+  }
+
+  &__card {
+    background-color: var(--white);
+    margin-bottom: 5%;
+    border: 2px solid var(--orange-bg);
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) {
+  .answers {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+    }
+
+    &__card {
+      width: 70%;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .answers {
+    &__card {
+      width: 50%;
+      margin-bottom: 2%;
+    }
+  }
+}
