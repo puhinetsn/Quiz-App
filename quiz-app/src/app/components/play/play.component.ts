@@ -1,20 +1,26 @@
 import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
+import { Quiz } from '../../models/quiz.model';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-play',
   standalone: true,
-  imports: [MatButtonModule, MatDividerModule, MatIconModule],
   templateUrl: './play.component.html',
-  styleUrl: './play.component.scss',
+  styleUrls: ['./play.component.scss'],
+  imports: [MatButtonModule, MatDividerModule, MatIconModule],
 })
 export class PlayComponent {
-  private router = inject(Router);
+  quiz: Quiz;
+
+  constructor(private router: Router) {
+    const navigation = this.router.getCurrentNavigation();
+    this.quiz = navigation?.extras.state?.['quiz'];
+  }
 
   public startQuiz(): void {
-    this.router.navigate([`start/${1}`]);
+    this.router.navigate(['start', 1]);
   }
 }

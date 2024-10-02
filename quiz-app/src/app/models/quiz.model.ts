@@ -28,3 +28,11 @@ export interface Question {
   category: string;
   difficulty: string;
 }
+
+export interface Quiz {
+  name: string;
+  difficulty: string;
+  category: string;
+  length: number;
+  questions: Question[];
+}

@@ -1,4 +1,13 @@
 <app-header></app-header>
-<app-quiz></app-quiz>
-<app-quiz></app-quiz>
+<div class="quiz-list">
+  <div *ngIf="quizes.length > 0">
+    <div *ngFor="let quiz of quizes">
+      <app-quiz [quiz]="quiz"></app-quiz>
+    </div>
+  </div>
+
+  <div *ngIf="quizes.length === 0">
+    <p>No quizzes available at the moment.</p>
+  </div>
+</div>
 <app-im-lucky></app-im-lucky>

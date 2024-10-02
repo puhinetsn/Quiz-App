@@ -2,45 +2,10 @@
   width: 100vw;
   display: flex;
   justify-content: space-around;
-
-  &__icon {
-    color: var(--orange-bg);
-    background-color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5%;
-    border-radius: 50%;
-    border: 2px solid var(--orange-bg);
-    font-size: xx-large;
-  }
-}
-
-@media (min-width: 576px) {
-  .nav {
-    &__icon {
-      padding: 4%;
-    }
-  }
-}
-
-@media (min-width: 768px) {
-  .nav {
-    &__icon {
-      padding: 3%;
-    }
-  }
 }
 
 @media (min-width: 992px) {
   .nav {
     justify-content: center;
-    &__icon {
-      padding: 1.5%;
-    }
-  }
-
-  .left {
-    margin-right: 15%;
   }
 }

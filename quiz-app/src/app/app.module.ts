@@ -13,6 +13,7 @@ import { AnswersComponent } from './components/answers/answers.component';
 import { MainComponent } from './components/main/main.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { PlayComponent } from './components/play/play.component';
+import { AnswerComponent } from './components/answer/answer.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -26,6 +27,7 @@ import { PlayComponent } from './components/play/play.component';
     MainComponent,
     NavigationComponent,
     PlayComponent,
+    AnswerComponent,
   ],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],

@@ -1,15 +1,15 @@
 <div class="quiz">
   <div class="quiz__item">
     <div class="quiz__general">
-      <h2>What fruit or vegetable are you?</h2>
+      <h2>{{ quiz.name }}</h2>
       <div class="quiz__info">
-        <p>Status: Not Passed</p>
-        <p>Category: Movies</p>
-        <p>Difficulty: Hard</p>
+        <p>Questions: {{ quiz.length }}</p>
+        <p>Category: {{ quiz.category }}</p>
+        <p>Difficulty: {{ quiz.difficulty }}</p>
       </div>
     </div>
-    <div class="quiz__start" (click)="quizStart()">
-      <button mat-flat-button>Start</button>
+    <div class="quiz__start">
+      <button mat-flat-button (click)="quizStart()">Start</button>
     </div>
   </div>
 </div>
