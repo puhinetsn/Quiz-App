@@ -14,11 +14,12 @@ import { MainComponent } from './components/main/main.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { PlayComponent } from './components/play/play.component';
 import { AnswerComponent } from './components/answer/answer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ResultsComponent } from './components/results/results.component';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    BrowserModule,
     AppRoutingModule,
     HeaderComponent,
     QuizComponent,
@@ -28,6 +29,9 @@ import { AnswerComponent } from './components/answer/answer.component';
     NavigationComponent,
     PlayComponent,
     AnswerComponent,
+    ResultsComponent,
+    BrowserModule,
+    BrowserAnimationsModule,
   ],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
