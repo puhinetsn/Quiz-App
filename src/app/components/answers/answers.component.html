@@ -6,8 +6,9 @@
         *ngFor="let answer of filteredAnswers"
         [title]="answer"
         [value]="answer"
-      ></app-answer>
+        (click)="selectAnswer(answer)"
+      />
     </div>
-    <app-navigation></app-navigation>
+    <app-navigation (click)="nextQuestion()"></app-navigation>
   </div>
 </div>
