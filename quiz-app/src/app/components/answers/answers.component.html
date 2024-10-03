@@ -1,42 +1,12 @@
 <div class="answers">
   <div class="answers__container">
-    <h1 class="answers__title">What is the most famous Britney Spears Song?</h1>
+    <h1 class="answers__title">{{ currentQuestion }}</h1>
     <div class="answers__list">
-      <mat-card class="answers__card" appearance="outlined">
-        <mat-card-header>
-          <mat-card-title-group>
-            <mat-card-title>Toxic</mat-card-title>
-            <mat-radio-button value="Toxic"></mat-radio-button>
-          </mat-card-title-group>
-        </mat-card-header>
-      </mat-card>
-
-      <mat-card class="answers__card" appearance="outlined">
-        <mat-card-header>
-          <mat-card-title-group>
-            <mat-card-title>Gimme More</mat-card-title>
-            <mat-radio-button value="Toxic"></mat-radio-button>
-          </mat-card-title-group>
-        </mat-card-header>
-      </mat-card>
-
-      <mat-card class="answers__card" appearance="outlined">
-        <mat-card-header>
-          <mat-card-title-group>
-            <mat-card-title>Oops... I Did It Again</mat-card-title>
-            <mat-radio-button value="Toxic"></mat-radio-button>
-          </mat-card-title-group>
-        </mat-card-header>
-      </mat-card>
-
-      <mat-card class="answers__card" appearance="outlined">
-        <mat-card-header>
-          <mat-card-title-group>
-            <mat-card-title>Womanaizer</mat-card-title>
-            <mat-radio-button value="Toxic"></mat-radio-button>
-          </mat-card-title-group>
-        </mat-card-header>
-      </mat-card>
+      <app-answer
+        *ngFor="let answer of filteredAnswers"
+        [title]="answer"
+        [value]="answer"
+      ></app-answer>
     </div>
     <app-navigation></app-navigation>
   </div>

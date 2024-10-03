@@ -24,7 +24,7 @@ export class QuizesService {
     const difficulty = ranDiff();
 
     return this.http.get<Question[]>(
-      `https://quizapi.io/api/v1/questions?apiKey=lFMXk5Ve8Cn9S6y4WQ0LeZ8dv6wW6BRH3BlgVzib&limit=${questionCount}&category=${category}&difficulty=${difficulty}`
+      `https://quizapi.io/api/v1/questions?apiKey=nAgOsJFV6jONra5tQMMMXlP9OC7NOkItvTuhOkfq&limit=${questionCount}&category=${category}&difficulty=${difficulty}`
     );
   }
 }

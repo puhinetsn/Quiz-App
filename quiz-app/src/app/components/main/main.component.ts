@@ -5,28 +5,45 @@ import { ImLuckyComponent } from '../im-lucky/im-lucky.component';
 import { HeaderComponent } from '../header/header.component';
 import { QuizComponent } from '../quiz/quiz.component';
 import { HttpClientModule } from '@angular/common/http';
+import { Question, Quiz } from '../../models/quiz.model';
+import { CommonModule } from '@angular/common';
+import { PlayComponent } from '../play/play.component';
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
-  styleUrl: './main.component.scss',
+  styleUrls: ['./main.component.scss'],
   standalone: true,
-  imports: [HeaderComponent, QuizComponent, ImLuckyComponent, HttpClientModule],
+  imports: [
+    CommonModule,
+    HeaderComponent,
+    QuizComponent,
+    ImLuckyComponent,
+    HttpClientModule,
+    PlayComponent,
+  ],
 })
 export class MainComponent {
   private router = inject(Router);
   public quizService = inject(QuizesService);
-  ngOnInit(): void {
-    if (this.router.url !== '/') {
-      this.router.navigate(['/']);
-    }
+  public quizes: Quiz[] = [];
 
-    this.loadQuiz();
+  ngOnInit(): void {
+    this.loadQuizzes();
   }
 
-  loadQuiz(): void {
-    this.quizService.getRandomQuiz().subscribe((res) => {
-      console.log(res);
-    });
+  loadQuizzes(): void {
+    for (let i = 0; i < 10; i++) {
+      this.quizService.getRandomQuiz().subscribe((res: Question[]) => {
+        const quiz: Quiz = {
+          name: `Test your ${res[0].category} knowledge!`,
+          difficulty: res[0].difficulty,
+          category: res[0].category,
+          length: res.length,
+          questions: res,
+        };
+        this.quizes.push(quiz);
+      });
+    }
   }
 }

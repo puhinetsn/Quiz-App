@@ -1,0 +1,25 @@
+.answer {
+  &__card {
+    background-color: var(--white);
+    margin-bottom: 5%;
+    border: 2px solid var(--orange-bg);
+    width: 60vw;
+  }
+}
+
+@media (min-width: 768px) {
+  .answer {
+    &__card {
+      width: 50vw;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .answer {
+    &__card {
+      width: 40vw;
+      margin-bottom: 2%;
+    }
+  }
+}
