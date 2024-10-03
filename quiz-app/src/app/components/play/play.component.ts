@@ -21,6 +21,6 @@ export class PlayComponent {
   }
 
   public startQuiz(): void {
-    this.router.navigate(['start', 1]);
+    this.router.navigate(['start', 1], { state: { quiz: this.quiz } });
   }
 }

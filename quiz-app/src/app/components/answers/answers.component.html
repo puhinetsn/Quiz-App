@@ -1,7 +1,13 @@
 <div class="answers">
   <div class="answers__container">
-    <h1 class="answers__title">???</h1>
-    <div class="answers__list"></div>
+    <h1 class="answers__title">{{ currentQuestion }}</h1>
+    <div class="answers__list">
+      <app-answer
+        *ngFor="let answer of filteredAnswers"
+        [title]="answer"
+        [value]="answer"
+      ></app-answer>
+    </div>
     <app-navigation></app-navigation>
   </div>
 </div>
