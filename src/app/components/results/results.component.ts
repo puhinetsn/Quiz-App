@@ -18,7 +18,7 @@ export class ResultsComponent {
     this.router.navigate(['/']);
   }
 
-  calcScore(correctAnswers: number, totalQuestions: number): number {
+  public calcScore(correctAnswers: number, totalQuestions: number): number {
     return Math.round((correctAnswers / totalQuestions) * 100);
   }
 }
