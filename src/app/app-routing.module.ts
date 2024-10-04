@@ -1,19 +1,28 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { MainComponent } from './components/main/main.component';
-import { PlayComponent } from './components/play/play.component';
-import { AnswersComponent } from './components/answers/answers.component';
-import { ResultsComponent } from './components/results/results.component';
+import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-  { path: '', component: MainComponent },
-  { path: 'start', component: PlayComponent },
-  { path: 'start/:id', component: AnswersComponent },
-  { path: 'results', component: ResultsComponent },
+  {
+    path: '',
+    loadComponent: () =>
+      import('@components/main/main.component').then((c) => c.MainComponent),
+  },
+  {
+    path: 'start',
+    loadComponent: () =>
+      import('@components/play/play.component').then((c) => c.PlayComponent),
+  },
+  {
+    path: 'start/:id',
+    loadComponent: () =>
+      import('@components/answers/answers.component').then(
+        (c) => c.AnswersComponent
+      ),
+  },
+  {
+    path: 'results',
+    loadComponent: () =>
+      import('@components/results/results.component').then(
+        (c) => c.ResultsComponent
+      ),
+  },
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-})
-export class AppRoutingModule {}
