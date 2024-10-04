@@ -1,9 +1,9 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavigationComponent } from '../navigation/navigation.component';
-import { Question } from '../../models/quiz.model';
+import { NavigationComponent } from '@components/navigation/navigation.component'; // використання аліасу для NavigationComponent
+import { Question } from '@models/quiz.model'; // використання аліасу для Question
 import { Router } from '@angular/router';
-import { AnswerComponent } from '../answer/answer.component';
+import { AnswerComponent } from '@components/answer/answer.component'; // використання аліасу для AnswerComponent
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
