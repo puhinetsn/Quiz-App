@@ -1,8 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
-import { Quiz } from '../../models/quiz.model';
-import { MatIconModule } from '@angular/material/icon';
-import { MatDividerModule } from '@angular/material/divider';
+import { Quiz } from '@models/quiz.model'; // використання аліасу для моделі Quiz
+import { MatIconModule } from '@angular/material/icon'; // аліас не потрібен, якщо ви не хочете налаштовувати його
+import { MatDividerModule } from '@angular/material/divider'; // аліас не потрібен, якщо ви не хочете налаштовувати його
 import { MatButtonModule } from '@angular/material/button';
 
 @Component({
