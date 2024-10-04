@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatRadioModule } from '@angular/material/radio';
-import { NavigationComponent } from '../navigation/navigation.component';
+import { NavigationComponent } from '@components/navigation/navigation.component';
 
 @Component({
   selector: 'app-answer',

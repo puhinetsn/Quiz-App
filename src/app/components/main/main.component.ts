@@ -1,13 +1,13 @@
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
-import { QuizesService } from '../../services/quizes.service';
-import { ImLuckyComponent } from '../im-lucky/im-lucky.component';
-import { HeaderComponent } from '../header/header.component';
-import { QuizComponent } from '../quiz/quiz.component';
+import { QuizesService } from '@services/quizes.service';
+import { ImLuckyComponent } from '@components/im-lucky/im-lucky.component';
+import { HeaderComponent } from '@components/header/header.component';
+import { QuizComponent } from '@components/quiz/quiz.component';
 import { HttpClientModule } from '@angular/common/http';
-import { Question, Quiz } from '../../models/quiz.model';
+import { Question, Quiz } from '@models/quiz.model';
 import { CommonModule } from '@angular/common';
-import { PlayComponent } from '../play/play.component';
+import { PlayComponent } from '@components/play/play.component';
 
 @Component({
   selector: 'app-main',
